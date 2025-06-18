@@ -12,23 +12,23 @@ O script `schema.sql` neste repositório é responsável por criar toda a estrut
 
 A imagem abaixo mostra as 5 tabelas do projeto criadas com sucesso no SQL Server Management Studio
 
-![Visualização das tabelas criadas no SSMS](./assets/todas-as-tabelas.png)
+![Visualização das tabelas criadas no SSMS](./assets/todas-as-tabelas.PNG)
 
 ### Dados Inseridos (Exemplos via `SELECT *`)
 
 As tabelas de zonas e programações foram populadas com dados baseados nas informações de coleta de lixo comum e seletivo de Campo Grande/MS, dados coletados no site oficial da SOLURB.
 
 **1. Zonas de Coleta Comum**
-![Dados da Tabela ZonaColetaComum](./assets/select-ZonaColetaComum.png)
+![Dados da Tabela ZonaColetaComum](./assets/select-ZonaColetaComum.PNG)
 
 **2. Programação da Coleta Comum**
-![Dados da Tabela ProgramacaoColetaComum](./assets/select-ProgramacaoColetaComum.png)
+![Dados da Tabela ProgramacaoColetaComum](./assets/select-ProgramacaoColetaComum.PNG)
 
 **3. Zonas de Coleta Seletiva**
-![Dados da Tabela ZonaColetaSeletiva](./assets/select-ZonaColetaSeletiva.png)
+![Dados da Tabela ZonaColetaSeletiva](./assets/select-ZonaColetaSeletiva.PNG)
 
 **4. Programação da Coleta Seletiva**
-![Dados da Tabela ProgramacaoColetaSeletiva](./assets/select-ProgramacaoColetaSeletiva.png)
+![Dados da Tabela ProgramacaoColetaSeletiva](./assets/select-ProgramacaoColetaSeletiva.PNG)
 
 ## Conteúdo do Script `schema.sql`
 
