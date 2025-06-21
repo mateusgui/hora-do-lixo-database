@@ -42,10 +42,10 @@ CREATE TABLE Usuario (
     email NVARCHAR(255) NOT NULL UNIQUE,
     senha_hash NVARCHAR(MAX) NOT NULL,
     endereco_rua NVARCHAR(255) NULL,
-    endereco_numero NVARCHAR(8) NULL, -- <-- OTIMIZAÇÃO APLICADA AQUI
+    endereco_numero NVARCHAR(8) NULL,
     endereco_complemento NVARCHAR(100) NULL,
     endereco_bairro NVARCHAR(100) NULL,
-    cep CHAR(8) NULL,                  -- <-- OTIMIZAÇÃO APLICADA AQUI
+    cep CHAR(8) NULL,
     id_zona_coleta_comum INT NULL,
     id_zona_coleta_seletiva INT NULL,
     data_cadastro DATETIME NOT NULL DEFAULT GETDATE(),
