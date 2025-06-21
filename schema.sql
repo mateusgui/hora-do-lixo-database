@@ -36,6 +36,31 @@ CREATE TABLE dbo.ProgramacaoColetaSeletiva (
 );
 GO
 
+CREATE TABLE Usuario (
+    id_usuario UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+    nome_completo NVARCHAR(255) NOT NULL,
+    email NVARCHAR(255) NOT NULL UNIQUE,
+    senha_hash NVARCHAR(MAX) NOT NULL,
+    endereco_rua NVARCHAR(255) NULL,
+    endereco_numero NVARCHAR(8) NULL, -- <-- OTIMIZAÇÃO APLICADA AQUI
+    endereco_complemento NVARCHAR(100) NULL,
+    endereco_bairro NVARCHAR(100) NULL,
+    cep CHAR(8) NULL,                  -- <-- OTIMIZAÇÃO APLICADA AQUI
+    id_zona_coleta_comum INT NULL,
+    id_zona_coleta_seletiva INT NULL,
+    data_cadastro DATETIME NOT NULL DEFAULT GETDATE(),
+    status BIT NOT NULL DEFAULT 1,
+    horario_alerta_comum TIME NULL,
+    alerta_comum_ativo BIT NOT NULL DEFAULT 0,
+    horario_alerta_seletiva TIME NULL,
+    alerta_seletiva_ativo BIT NOT NULL DEFAULT 0,
+    CONSTRAINT FK_Usuario_Zona_Comum FOREIGN KEY (id_zona_coleta_comum) 
+    REFERENCES dbo.ZonaColetaComum(id_zona_coleta_comum),
+    CONSTRAINT FK_Usuario_Zona_Seletiva FOREIGN KEY (id_zona_coleta_seletiva) 
+    REFERENCES dbo.ZonaColetaSeletiva(id_zona_coleta_seletiva)
+);
+GO
+
 -- =====================================================================
 -- SCRIPT PARA INSERIR AS ZONAS DE COLETA COMUM
 -- =====================================================================
